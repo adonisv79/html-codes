@@ -1,0 +1,31 @@
+{
+  "name": "html-codes",
+  "version": "0.2.1",
+  "description": "HTML Codes enumeration which includes an HtmlError class extending the javascript Error class.",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "files": [
+    "dist/src"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adonisv79/html-codes.git"
+  },
+  "keywords": [
+    "html",
+    "codes",
+    "error"
+  ],
+  "author": "Adonis lee Villamor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adonisv79/html-codes/issues"
+  },
+  "homepage": "https://github.com/adonisv79/html-codes#readme",
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}
