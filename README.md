@@ -1,5 +1,5 @@
 # html-codes
-HTML Codes enumeration which includes an HtmlError class extending the javascript Error class.
+HTML Status Codes enumeration which includes an HtmlError class extending the javascript Error class. Definintions are as per defined in Wikipedia (https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 
 # Installation 
 ```
