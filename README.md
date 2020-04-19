@@ -1,9 +1,9 @@
-# html-codes
-HTML Status Codes enumeration which includes an HtmlError class extending the javascript Error class. Definintions are as per defined in Wikipedia (https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+# http-error-types
+WEB (HTTP) Error Response Status Codes enumeration which includes an HttpError class extending the javascript Error class. Definintions are as per defined in Wikipedia (https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 
 # Installation 
 ```
-npm i html-codes --save
+npm i http-error-types --save
 ```
 
 # Enums
@@ -19,15 +19,15 @@ if (s === 500 || a === clientErrorCodes.unauthorized) {
 }
 ```
 
-# HtmlError class
+# HttpError class
 This class extends the default Javascript Error by adding 2 properties and a cutom constructor
 ```
 try{
-  throw new HtmlError(clientErrorCodes.unauthorized, 'Please log-in first');
+  throw new HttpError(clientErrorCodes.unauthorized, 'Please log-in first');
 } catch(err) {
   // note in Typescript, we cannot define the type of catch err.
   // We can however manualy check if it derives from a certain class instance
-  if (err instaceof HtmlError) {
+  if (err instaceof HttpError) {
     console.log(`Error (${err.statusCode}) ${err.statusName}: ${err.message}`);
     // this prints out the following:
     // "Error (401) unauthorized: Please log-in first

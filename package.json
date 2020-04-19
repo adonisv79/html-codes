@@ -1,7 +1,7 @@
 {
-  "name": "html-codes",
-  "version": "0.2.1",
-  "description": "HTML Codes enumeration which includes an HtmlError class extending the javascript Error class.",
+  "name": "http-error-types",
+  "version": "1.0.0",
+  "description": "WEB (HTTP) Response Status Codes enumeration which includes an HttpError class extending the javascript Error class.",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
   "files": [
@@ -12,19 +12,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adonisv79/html-codes.git"
+    "url": "git+https://github.com/adonisv79/http-error-types.git"
   },
   "keywords": [
-    "html",
+    "http",
+    "web",
     "codes",
     "error"
   ],
   "author": "Adonis lee Villamor",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/adonisv79/html-codes/issues"
+    "url": "https://github.com/adonisv79/http-error-types/issues"
   },
-  "homepage": "https://github.com/adonisv79/html-codes#readme",
+  "homepage": "https://github.com/adonisv79/http-error-types#readme",
   "devDependencies": {
     "typescript": "^3.8.3"
   }

@@ -87,17 +87,24 @@ export enum serverErrorCodes {
 }
 
 /** Extended javascript error class containing added statusCode and statusName properties */
-export default class HtmlError extends Error {
+export default class HttpError extends Error {
   private code: clientErrorCodes | serverErrorCodes;
 
   /**
-   * Creates a new instance of an HTML Error 
+   * Creates a new instance of an Error object with extended properties to define HTTP status codes
    * @param code The client or server error code to use
    * @param message The error message to send
    */
   constructor(code: clientErrorCodes | serverErrorCodes, message: string) {
     super(message);
     this.code = code;
+  }
+  
+  /** Use this to validate if the error is an Http error or a normal error. 
+   * if its normal error then condition "if (err.isHttpError)" yields falsy
+   */
+  get isHttpError(): boolean {
+	  return true;
   }
 
   /** The numeric error code value */
