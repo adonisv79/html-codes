@@ -5,7 +5,7 @@ WEB (HTTP) Error Response Status Codes enumeration which includes an HttpError c
 ```
 npm i http-error-types --save
 ```
-To use in your code, simply import it
+To use in your code, simply import it and start throwing as HttpError
 ```
 import HttpError, { clientErrorCodes, serverErrorCodes } from 'http-error-types';
 
@@ -13,6 +13,19 @@ import HttpError, { clientErrorCodes, serverErrorCodes } from 'http-error-types'
 throw new HttpError(clientErrorCodes.badRequest, result.error.message);
 // server side error
 throw new HttpError(serverErrorCodes.internalServer, result.error.message)
+```
+
+Handling responses in expressJs is much simpler, adding an express error middleware for example is handled like the following
+```
+this.app.use((err: HttpError, req: Request, res: Response, next: NextFunction) => {
+  // HttpError has an 'isHttpError' property to check if it was thrown using our custom Error type
+  if (!err.isHttpError) { // generic error
+    console.error(err); // show error in server logs
+    return res.status(500).send({ error: 'Unhandled error' }); //show generic message back
+  }
+  // its thrown as HttpError so its safe to use the message and statusCode
+  res.status(err.statusCode).send(err.message);
+});
 ```
 
 # Enums
