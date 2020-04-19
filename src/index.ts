@@ -12,7 +12,7 @@ export enum clientErrorCodes {
   /** The requested resource could not be found "but" may be available in the future. */
   notFound = 404,
   /** A request method is not supported for the requested resource */
-  methodNotAllowes = 405,
+  methodNotAllowed = 405,
   /** The requested resource is capable of generating only content not acceptable
    * according to the Accept headers sent in the request. */
   notAcceptable = 406,
@@ -104,7 +104,8 @@ export default class HttpError extends Error {
    * if its normal error then condition "if (err.isHttpError)" yields falsy
    */
   get isHttpError(): boolean {
-	  return true;
+	  if (this.code) { return true };
+	  return false;
   }
 
   /** The numeric error code value */

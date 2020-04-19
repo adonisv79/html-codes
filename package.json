@@ -1,6 +1,6 @@
 {
   "name": "http-error-types",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "WEB (HTTP) Response Status Codes enumeration which includes an HttpError class extending the javascript Error class.",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
