@@ -1,9 +1,18 @@
 # http-error-types
 WEB (HTTP) Error Response Status Codes enumeration which includes an HttpError class extending the javascript Error class. Definintions are as per defined in Wikipedia (https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 
-# Installation 
+# Installation and import
 ```
 npm i http-error-types --save
+```
+To use in your code, simply import it
+```
+import HttpError, { clientErrorCodes, serverErrorCodes } from 'http-error-types';
+
+// clientside error
+throw new HttpError(clientErrorCodes.badRequest, result.error.message);
+// server side error
+throw new HttpError(serverErrorCodes.internalServer, result.error.message)
 ```
 
 # Enums
