@@ -10,9 +10,9 @@ To use in your code, simply import it and start throwing as HttpError
 import HttpError, { clientErrorCodes, serverErrorCodes } from 'http-error-types';
 
 // clientside error
-throw new HttpError(clientErrorCodes.badRequest, result.error.message);
+throw new HttpError(clientErrorCodes.badRequest, "How dare you not follow the param rule of my API!!!");
 // server side error
-throw new HttpError(serverErrorCodes.internalServer, result.error.message)
+throw new HttpError(serverErrorCodes.internalServer, "Oopsie! someone commited to a bad relationship here...")
 ```
 
 Handling responses in expressJs is much simpler, adding an express error middleware for example is handled like the following
